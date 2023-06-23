@@ -1,0 +1,86 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer components {
+    body {
+        @apply h-screen m-0 overflow-hidden 
+    }
+
+    #app {
+        @apply m-0 flex justify-center h-screen items-center
+    }
+
+    .leftButtons, .rightButtons {
+        @apply w-20
+    }
+
+    .leftButtons img, .rightButtons img {
+        @apply bg-gray-50 w-full rounded-xl mb-5 object-scale-down cursor-pointer
+    }
+
+    .main-container {
+        @apply w-full justify-center
+    }
+
+    .main-header {
+        @apply text-center text-4xl mb-5
+    }
+
+    .main-header h1 {
+        @apply font-bold
+    }
+
+    .main-header h2 {
+        @apply text-light-gray
+    }
+
+    .main-content {
+        @apply flex justify-evenly
+    }
+
+    .main-button-area {
+        @apply w-3/4 text-center mt-10
+    }
+
+    .main-button-area .leftGroup {
+        @apply border-r-2 border-black
+    }
+
+    .main-button-area .leftGroup,
+    .main-button-area .rightGroup {
+        @apply inline-flex items-center
+    }
+
+    .main-button-area .leftGroup {
+        @apply mr-3
+    }
+
+    .main-button-area .leftGroup span,
+    .main-button-area .leftGroup img,
+    .main-button-area .rightGroup span,
+    .main-button-area .rightGroup img {
+        @apply font-bold mr-5
+    }
+
+    .main-button-area .leftGroup button,
+    .main-button-area .rightGroup button {
+        @apply w-20 h-12 rounded-full mr-3 text-sm
+    }
+
+    .main-button-area .leftGroup .firstBtn,
+    .main-button-area .rightGroup .firstBtn {
+        @apply bg-black text-white
+    }
+
+    .main-button-area .leftGroup button:not(.firstBtn),
+    .main-button-area .rightGroup button:not(.firstBtn) {
+        @apply bg-light-gray-2 text-light-gray
+    }
+
+    .main-button-area .rightGroup .secondBtn {
+        @apply w-24
+    }
+}

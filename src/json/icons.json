@@ -1,0 +1,56 @@
+{
+    "leftIcons": [
+        {
+            "id": 1,
+            "url": "analytics.svg",
+            "alt": "Analytics"
+        },
+        {
+            "id": 2,
+            "url": "wordpress.svg",
+            "alt": "wordpress"
+        },
+        {
+            "id": 3,
+            "url": "linkedIn.svg",
+            "alt": "LinkedIn"
+        },
+        {
+            "id": 4,
+            "url": "woocommerce.svg",
+            "alt": "Woocommerce"
+        },
+        {
+            "id": 5,
+            "url": "chevron-down.svg",
+            "alt": "Chevron Down"
+        }
+    ],
+    "rightIcons": [
+        {
+            "id": 0,
+            "url": "facebook.svg",
+            "alt": "Facebook"
+        },
+        {
+            "id": 1,
+            "url": "youtube.svg",
+            "alt": "Youtube"
+        },
+        {
+            "id": 2,
+            "url": "instagram.svg",
+            "alt": "Instagram"
+        },
+        {
+            "id": 3,
+            "url": "shopify.svg",
+            "alt": "Shopify"
+        },
+        {
+            "id": 4,
+            "url": "snapchat.svg",
+            "alt": "Snapchat"
+        }
+    ]
+}
