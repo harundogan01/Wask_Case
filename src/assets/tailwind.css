@@ -22,7 +22,7 @@
     }
 
     .main-container {
-        @apply w-full justify-center
+        @apply w-full justify-center sm-phone:hidden phone:block
     }
 
     .main-header {
@@ -45,46 +45,28 @@
         @apply w-3/4 text-center mt-10
     }
 
-    .main-button-area .leftGroup {
-        @apply border-r-2 border-black
-    }
-
     .main-button-area .leftGroup,
     .main-button-area .rightGroup {
         @apply inline-flex items-center
     }
 
     .main-button-area .leftGroup {
-        @apply mr-3
+        @apply tablet:mr-3 tablet:border-r-2 tablet:border-black
     }
 
     .main-button-area .rightGroup {
-        @apply p-3
+        @apply tablet:p-3 phone:pt-3 phone:mb-3
     }
 
     .main-button-area .leftGroup span:not(.v-btn__content),
     .main-button-area .leftGroup img,
     .main-button-area .rightGroup span:not(.v-btn__content),
     .main-button-area .rightGroup img {
-        @apply font-bold mr-5
+        @apply tablet:font-bold tablet:mr-5 phone:hidden tablet:inline-flex
     }
 
     .main-button-area .leftGroup button,
     .main-button-area .rightGroup button {
-        @apply w-20 h-12 rounded-full mr-3 text-[12px]
-    }
-
-    .main-button-area .leftGroup .firstBtn,
-    .main-button-area .rightGroup .firstBtn {
-        @apply bg-black text-white
-    }
-
-    .main-button-area .leftGroup button:not(.firstBtn),
-    .main-button-area .rightGroup button:not(.firstBtn) {
-        @apply bg-light-gray-2 text-light-gray
-    }
-
-    .main-button-area .rightGroup .secondBtn {
-        @apply w-24
+        @apply phone:w-8 phone:text-[12px] tablet:w-20 h-12 rounded-full phone:mr-3 bg-light-gray-2 text-light-gray
     }
 }
