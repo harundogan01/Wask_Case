@@ -40,7 +40,6 @@ export default {
   methods: {
     getData() {
       this.graphData = [];
-      console.log("Graph123: ", this.graphData);
       axios.get('https://api.wask.co/demo/myaccounts', {
         headers: {
           'token': '2zcgJnjDyb'
