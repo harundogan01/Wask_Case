@@ -58,16 +58,20 @@
         @apply mr-3
     }
 
-    .main-button-area .leftGroup span,
+    .main-button-area .rightGroup {
+        @apply p-3
+    }
+
+    .main-button-area .leftGroup span:not(.v-btn__content),
     .main-button-area .leftGroup img,
-    .main-button-area .rightGroup span,
+    .main-button-area .rightGroup span:not(.v-btn__content),
     .main-button-area .rightGroup img {
         @apply font-bold mr-5
     }
 
     .main-button-area .leftGroup button,
     .main-button-area .rightGroup button {
-        @apply w-20 h-12 rounded-full mr-3 text-sm
+        @apply w-20 h-12 rounded-full mr-3 text-[12px]
     }
 
     .main-button-area .leftGroup .firstBtn,

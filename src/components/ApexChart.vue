@@ -1,6 +1,6 @@
 <template>
-    <div id="chart">
-        <apexchart width="1150" height="400" type="line" :options="chartOptions" :series="series"></apexchart>
+    <div id="chart" v-if="graphData.length > 0">
+        <apexchart width="100%" height="350" type="line" :options="chartOptions" :series="series"></apexchart>
     </div>
 </template>
 
@@ -11,8 +11,7 @@ export default {
         return {
             series: [{
               name: "Desktops",
-              data: [],
-              dates: []
+              data: []
           }],
           chartOptions: {
             chart: {
@@ -44,19 +43,28 @@ export default {
           }
         }
     },
-    created() {
-      this.getAPIData()
+    watch: {
+      graphData() {
+        this.getAPIData()
+      }
     },
     methods: {
       getAPIData() {
-        console.log("First: ", this.graphData)
-        this.graphData.forEach(val => {
-          val.forEach(val2 => {
-            val2.insights.data.forEach(val3 => {
-              console.log("Val3", val3)
-            })
+        this.series[0].data = []
+        this.chartOptions.xaxis.categories = []
+        setTimeout(() => {
+          this.graphData.forEach((val) => {
+          val.insights.data.forEach((date) => {
+            if (this.$parent.$data.clickBtnSelected)
+              this.series[0].data.push(date.clicks)
+            else if (this.$parent.$data.impressionsBtnSelected)
+              this.series[0].data.push(date.impressions)
+            else if (this.$parent.$data.spendBtnSelected)
+              this.series[0].data.push(date.spend)
+            this.chartOptions.xaxis.categories.push(date.date_start)
           })
         })
+        }, 1000)
       }
     }
 }
